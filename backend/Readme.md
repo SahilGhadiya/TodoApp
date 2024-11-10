@@ -1,70 +1,42 @@
-Todo App Backend
-This is the backend server for the Todo App, built with Node.js and Express. It provides a RESTful API to manage tasks, including features for creating, reading, updating, and deleting tasks.
+# Backend Project
 
-Table of Contents
-Features
-Project Structure
-Installation
-Usage
-API Endpoints
-Technologies Used
-License
-Features
-RESTful API: Provides endpoints for managing tasks.
-CRUD Operations: Supports Create, Read, Update, and Delete operations for tasks.
-Task Status Update: API for marking tasks as complete or incomplete.
-Data Validation: Ensures that task data is valid before saving.
-Project Structure
-bash
-Copy code
-backend/
-├── controllers/ # Handles logic for API endpoints
-├── models/ # Database schemas
-├── routes/ # API routes
-├── config/ # Configuration files (e.g., database setup)
-├── server.js # Main entry point for the backend server
-└── package.json
-Installation
-Clone this repository:
+## Overview
+This is the backend part of the project, built using Node.js and Express to create a robust API for managing application data and handling server-side logic.
 
-bash
-Copy code
-git clone https://github.com/SahilGhadiya/TodoApp.git
-Navigate into the project directory:
+## Setup Instructions
 
-bash
-Copy code
-cd backend
-Install dependencies:
+### Prerequisites
+- Node.js (version 14 or higher recommended)
+- npm (comes with Node.js)
+- MongoDB (for data storage)
 
-bash
-Copy code
-npm install
-Set up environment variables:
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/SahilGhadiya/TodoApp.git
+   cd backend
 
-Create a .env file in the root directory.
-Define necessary variables (e.g., database URI, port number).
-Usage
-To start the backend server, run:
+2. Install the dependencies:
+   ```bash
+   npm install
 
-bash
-Copy code
-npm start
-The server will run on http://localhost:5000 by default (or the port you configured in .env).
+3. Set up environment variables: Create a .env file in the root directory with the following variables:
+   ```bash
+   MONGO_URI=<your-mongodb-connection-string>
+   PORT=5000
+   JWT_SECRET=<your-jwt-secret>
 
-API Endpoints
-GET /api/tasks: Retrieve all tasks.
-POST /api/tasks: Add a new task.
-GET /api/tasks/
-: Retrieve a task by its ID.
-PUT /api/tasks/
-: Update a task by its ID.
-DELETE /api/tasks/
-: Delete a task by its ID.
-Technologies Used
-Node.js — Runtime environment
-Express — Web framework for Node.js
-MongoDB (or relevant database) — Database to store task information
-Mongoose — ODM library for MongoDB
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+4. Running the Development Server
+   ```bash
+   node index.js
+
+### Tools and Libraries Used
+- Express.js: A Node.js web framework for building APIs and handling HTTP requests.
+- Mongoose: An ODM for MongoDB to simplify data interactions.
+- JWT (JSON Web Token): Used for secure authentication and authorization.
+- dotenv: Loads environment variables from a .env file into process.env
+
+### Challenges Faced and Decisions Made
+- Database Configuration: Setting up MongoDB with Mongoose required designing an efficient data schema and handling connections.
+- Authentication and Authorization: JWT was chosen to handle secure user authentication, as it provides a stateless, scalable solution for user management.
+- Error Handling: Implemented a consistent error-handling mechanism for better debugging and user feedback.
