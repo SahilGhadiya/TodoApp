@@ -18,6 +18,7 @@ export const Login = (props) => {
         });
         const json = await response.json();
         console.log(json);
+        navigate('/');
         if (json.success) {
             localStorage.setItem('token', json.authToken);
             toast.success("Logged In Successfully!", {
@@ -29,7 +30,6 @@ export const Login = (props) => {
                 draggable: true,
                 progress: undefined,
             });
-            navigate('/');
         } else {
 
             toast.error("Invalid Details!", {
