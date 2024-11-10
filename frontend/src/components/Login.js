@@ -18,9 +18,9 @@ export const Login = (props) => {
         });
         const json = await response.json();
         console.log(json);
-        navigate('/');
         if (json.success) {
             localStorage.setItem('token', json.authToken);
+            navigate('/');
             toast.success("Logged In Successfully!", {
                 position: "bottom-left",
                 autoClose: 2000,
