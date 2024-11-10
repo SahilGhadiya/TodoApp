@@ -1,66 +1,39 @@
-Todo App
-This is a simple Todo App built using React.js. It allows users to add, view, edit, and delete their tasks. This project serves as a straightforward way to practice using React components, hooks, and basic state management.
+# Frontend Project
 
-Table of Contents
-Features
-Project Structure
-Installation
-Usage
-Scripts
-Technologies Used
-License
-Features
-Add Tasks: Users can add new tasks to the list.
-View Tasks: Users can view all added tasks in a list format.
-Edit Tasks: Users can edit existing tasks.
-Delete Tasks: Users can remove tasks from the list.
-Task Status Update: Users can mark tasks as complete or incomplete.
-Responsive UI: Optimized for different screen sizes.
-Project Structure
-csharp
-Copy code
-frontend/
-├── public/ # Public assets
-│ ├── index.html
-│ └── ...
-├── src/ # Source code
-│ ├── components/ # Reusable components (e.g., TaskList, TaskItem)
-│ ├── App.js # Main App component
-│ ├── index.js # Entry point
-│ └── ...
-├── package.json
-└── README.md
-Installation
-Clone this repository:
+## Overview
+This is the frontend part of the project, built using React and related libraries to create an interactive, user-friendly interface.
 
-bash
-Copy code
-git clone [git@github.com:SahilGhadiya/TodoApp.git](https://github.com/SahilGhadiya/TodoApp.git)
-Navigate into the project directory:
+## Setup Instructions
 
-bash
-Copy code
-cd frontend
-Install dependencies:
+### Prerequisites
+- Node.js (version 14 or higher recommended)
+- npm (comes with Node.js)
 
-bash
-Copy code
-npm install
-Usage
-To run the Todo App on your local server, use the following command:
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/SahilGhadiya/TodoApp.git
+   cd frontend
 
-bash
-Copy code
-npm start
-This will start the development server and open the app in your default browser at http://localhost:3000.
+2. Install the dependencies:
+   ```bash
+   npm install
 
-Scripts
-Start: npm start — Runs the app in development mode.
-Build: npm run build — Builds the app for production in the build folder.
-Test: npm test — Launches the test runner.
-Technologies Used
-React.js — JavaScript library for building user interfaces
-HTML5 & CSS3 — Structure and styling
-JavaScript (ES6+) — Core language features
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+3. Running the Development Server
+   ```bash
+   npm start
+
+4. To create an optimized production build, use:
+   ```bash
+   npm run build
+
+This will generate a build folder containing the production-ready files.
+
+### Tools and Libraries Used
+- React: A JavaScript library for building user interfaces.
+- React Router: Used for routing to navigate between different components.
+- React Toastify: Displays notifications for user feedback, such as success and error messages.
+
+### Challenges Faced and Decisions Made
+- Routing Structure: Implementing seamless navigation with react-router-dom was essential for a smooth user experience.
+- Notification Management: Decided to use react-toastify to handle notifications, as it provided customizable and non-intrusive alerts for errors and success messages, improving user engagement and feedback.
