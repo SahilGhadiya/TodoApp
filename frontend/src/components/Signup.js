@@ -21,6 +21,7 @@ export const Signup = (props) => {
     console.log(json);
     if (json.success) {
       localStorage.setItem('token', json.authToken);
+      navigate('/login');
       toast.success("Logged In Successfully!", {
         position: "bottom-left",
         autoClose: 2000,
@@ -30,7 +31,6 @@ export const Signup = (props) => {
         draggable: true,
         progress: undefined,
       });
-      navigate('/login');
     } else {
       toast.error("User already exists!", {
         position: "bottom-left",
