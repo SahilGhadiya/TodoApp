@@ -48,6 +48,7 @@ This is the backend part of the project, built using Node.js and Express to crea
 - Express.js: A Node.js web framework for building APIs and handling HTTP requests.
 - Mongoose: An ODM for MongoDB to simplify data interactions.
 - JWT (JSON Web Token): Used for secure authentication and authorization.
+- bcryptjs: Used for securely hashing user passwords before storing them in the database.
 - dotenv: Loads environment variables from a .env file into process.env
 
 ### Challenges Faced and Decisions Made
