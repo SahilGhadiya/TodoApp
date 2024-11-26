@@ -28,14 +28,20 @@ This is the frontend part of the project, built using React and related librarie
 
    ```
 
-3. Running the Development Server
+3. Configure Environment Variables: Create a .env file in the root directory of the project and add the following
+   ```bash
+   REACT_APP_BACKEND_HOST=your_backend_host_url  
+
+   ```
+
+4. Running the Development Server
 
    ```bash
    npm start
 
    ```
 
-4. To create an optimized production build, use:
+5. To create an optimized production build, use:
    ```bash
    npm run build
    ```
